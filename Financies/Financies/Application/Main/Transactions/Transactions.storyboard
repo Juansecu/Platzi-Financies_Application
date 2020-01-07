@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zwS-2g-4Le">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transactions-->
+        <scene sceneID="ndB-HE-lXn">
+            <objects>
+                <viewController id="eOI-ih-vF7" customClass="TransactionsViewController" customModule="Financies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l7o-qX-LXk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o00-lJ-okh">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="o00-lJ-okh" secondAttribute="bottom" id="6wu-9O-4TG"/>
+                            <constraint firstItem="FJ4-6g-fsc" firstAttribute="trailing" secondItem="o00-lJ-okh" secondAttribute="trailing" id="MkQ-du-h14"/>
+                            <constraint firstItem="o00-lJ-okh" firstAttribute="leading" secondItem="FJ4-6g-fsc" secondAttribute="leading" id="T8s-35-BVL"/>
+                            <constraint firstItem="o00-lJ-okh" firstAttribute="top" secondItem="FJ4-6g-fsc" secondAttribute="top" id="Z9B-YM-Uej"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FJ4-6g-fsc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Transactions" id="tSr-nA-17h"/>
+                    <connections>
+                        <outlet property="tableView" destination="o00-lJ-okh" id="08r-sX-Mm6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZV-b8-hAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1786.9565217391305" y="-1225.4464285714284"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TeJ-6s-yI3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zwS-2g-4Le" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TabBarTransactions" selectedImage="TabBarTransactions" id="Q1g-Ad-HAe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="ssO-Rq-dpo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="GreenColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eOI-ih-vF7" kind="relationship" relationship="rootViewController" id="EOV-qQ-9uj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xn5-cF-Wm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876.81159420289862" y="-1225.4464285714284"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TabBarTransactions" width="20" height="20"/>
+        <namedColor name="GreenColor">
+            <color red="0.62352941176470589" green="0.74117647058823533" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5z1-Ec-GDp">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="cAl-N9-8KP">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5z1-Ec-GDp" customClass="TabBarViewController" customModule="Financies" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fme-zu-2mu">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Hfs-1K-P6o" kind="relationship" relationship="viewControllers" id="zAV-NY-Q0v"/>
+                        <segue destination="fhT-04-ZE9" kind="relationship" relationship="viewControllers" id="NZ5-M0-4zt"/>
+                        <segue destination="kII-pj-8Pj" kind="relationship" relationship="viewControllers" id="cb6-9P-PIv"/>
+                        <segue destination="Pvo-fI-KmL" kind="relationship" relationship="viewControllers" id="fE2-9w-7PM"/>
+                        <segue destination="zcH-T4-BMq" kind="relationship" relationship="viewControllers" id="pfc-9s-kJb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xeo-Bc-5Ik" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877" y="-19"/>
+        </scene>
+        <!--Transactions-->
+        <scene sceneID="JXL-6w-39B">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Transactions" id="Hfs-1K-P6o" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TabBarTransactions" selectedImage="TabBarTransactions" id="rmD-eG-4Km"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lfa-XO-i0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1791" y="-311"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="hCf-Ya-KQs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="zcH-T4-BMq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TabBarProfile" selectedImage="TabBarProfile" id="mNa-J3-mKk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NkT-ka-VwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2003" y="-185"/>
+        </scene>
+        <!--Budget-->
+        <scene sceneID="6dG-vI-SN8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Budget" id="fhT-04-ZE9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TabBarBudget" selectedImage="TabBarBudget" id="ssq-n1-5xZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Bk-nc-tUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2142" y="-19"/>
+        </scene>
+        <!--Statistics-->
+        <scene sceneID="49p-Wb-cjO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Statistics" id="Pvo-fI-KmL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TabBarStats" selectedImage="TabBarStats" id="ndb-p7-fag"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4kg-kS-8Fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1990" y="153"/>
+        </scene>
+        <!--Add-->
+        <scene sceneID="SHg-4B-Rhg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Add" id="kII-pj-8Pj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="8aM-hG-nL1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iMd-be-PwB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1830" y="288"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TabBarBudget" width="20" height="26"/>
+        <image name="TabBarProfile" width="20" height="20"/>
+        <image name="TabBarStats" width="17" height="18"/>
+        <image name="TabBarTransactions" width="20" height="20"/>
+    </resources>
+</document>
