@@ -14,6 +14,7 @@ target 'Financies' do
   pod 'Firebase/InAppMessagingDisplay'
   
   #pod 'FacebookLogin'
+  pod 'AccountKit'
   
   pod 'GoogleSignIn'
 end
