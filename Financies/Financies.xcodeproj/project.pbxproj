@@ -26,6 +26,8 @@
 		8F2B7A3323C640540081A968 /* AddTransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2B7A3223C640540081A968 /* AddTransactionsViewModel.swift */; };
 		8F2B7A3523C665CA0081A968 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2B7A3423C665CA0081A968 /* TransactionTableViewCell.swift */; };
 		8F2B7A3723C671F60081A968 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2B7A3623C671F60081A968 /* Numeric.swift */; };
+		8F39D16323C77F57001BA026 /* LocalNotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F39D16223C77F57001BA026 /* LocalNotificationsController.swift */; };
+		8F39D16523C78B25001BA026 /* PushNotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F39D16423C78B25001BA026 /* PushNotificationsController.swift */; };
 		8F3AB36923B5612200D8527A /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3AB36823B5612200D8527A /* SignInViewModel.swift */; };
 		8F603C8B23ABCA3A000D2754 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F603C8A23ABCA3A000D2754 /* TransactionsViewController.swift */; };
 		8F603C8D23ABD589000D2754 /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F603C8C23ABD589000D2754 /* EmptyState.xib */; };
@@ -108,6 +110,8 @@
 		8F2B7A3223C640540081A968 /* AddTransactionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionsViewModel.swift; sourceTree = "<group>"; };
 		8F2B7A3423C665CA0081A968 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		8F2B7A3623C671F60081A968 /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
+		8F39D16223C77F57001BA026 /* LocalNotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsController.swift; sourceTree = "<group>"; };
+		8F39D16423C78B25001BA026 /* PushNotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsController.swift; sourceTree = "<group>"; };
 		8F3AB36823B5612200D8527A /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		8F603C8A23ABCA3A000D2754 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		8F603C8C23ABD589000D2754 /* EmptyState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				8F07F46323A3F90D00DAD89A /* Info.plist */,
+				8F39D16123C77F06001BA026 /* Controllers */,
 				8FE6D80623A9390B00144F0B /* Extensions */,
 				8F07F47023A3FF2200DAD89A /* Resources */,
 				8F07F46F23A3FE6A00DAD89A /* Base */,
@@ -330,6 +335,15 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		8F39D16123C77F06001BA026 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8F39D16223C77F57001BA026 /* LocalNotificationsController.swift */,
+				8F39D16423C78B25001BA026 /* PushNotificationsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		8FE6D80323A924ED00144F0B /* Colors */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +427,7 @@
 				3671755413A1D66187864653 /* [CP] Embed Pods Frameworks */,
 				FD1B918BAB7442DB3502BA04 /* [CP] Copy Pods Resources */,
 				8FBD4EF123B17AA100BFC17B /* ShellScript */,
+				8F39D16023C77A1E001BA026 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -574,6 +589,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8F39D16023C77A1E001BA026 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Fabric;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
 		8FBD4EF123B17AA100BFC17B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -720,6 +754,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F39D16523C78B25001BA026 /* PushNotificationsController.swift in Sources */,
 				8F603C8F23ABE460000D2754 /* TabBarViewController.swift in Sources */,
 				8F2B7A3523C665CA0081A968 /* TransactionTableViewCell.swift in Sources */,
 				8F603C8B23ABCA3A000D2754 /* TransactionsViewController.swift in Sources */,
@@ -731,6 +766,7 @@
 				8F07F45823A3F90B00DAD89A /* AppDelegate.swift in Sources */,
 				8F2B7A2D23C633680081A968 /* TransactionsViewModel.swift in Sources */,
 				8FE6D80C23A98C0900144F0B /* OnBoardingContainerViewController.swift in Sources */,
+				8F39D16323C77F57001BA026 /* LocalNotificationsController.swift in Sources */,
 				8F2B7A3723C671F60081A968 /* Numeric.swift in Sources */,
 				8F3AB36923B5612200D8527A /* SignInViewModel.swift in Sources */,
 				8FC8774F23B5097E008DAC13 /* SignInViewController.swift in Sources */,

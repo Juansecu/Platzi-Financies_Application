@@ -16,9 +16,14 @@ import TwitterKit
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
+    
+    private var notifications: PushNotificationsController!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let _ = LocalNotificationsController()
+        notifications = PushNotificationsController(application: application)
+        
         TWTRTwitter.sharedInstance().start(withConsumerKey: "1GaOupS0ieCZkZURKvp9pq2f9", consumerSecret: "tZQqUvsyh4J9cEh3vdm2AysXdaASF9JsfFeBlG1W7T1hb7DZxr")
         
         FirebaseApp.configure()
@@ -92,6 +97,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }
         
         return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        notifications.addDeviceToken(deviceToken)
+        
+        let token = deviceToken.map { _ in String(format: "%02.2hhx") }.joined()
+        print(token)
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
