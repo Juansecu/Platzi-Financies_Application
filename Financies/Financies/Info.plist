@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AccountKitClientToken</key>
+	<string>de26fcbe5c07658347d0d179c9b06ee6</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -16,8 +18,6 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-    <key>AccountKitClientToken</key>
-    <string>de26fcbe5c07658347d0d179c9b06ee6</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -35,12 +35,12 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.122339820462-kfbicp3t12f26mn0kd31ftsd6scd1u67</string>
-                <string>ak2837011189695328</string>
-            </array>
+				<string>ak2837011189695328</string>
+			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>202001101054</string>
 	<key>FacebookAppID</key>
 	<string>2837011189695328</string>
 	<key>FacebookDisplayName</key>

@@ -428,6 +428,7 @@
 				FD1B918BAB7442DB3502BA04 /* [CP] Copy Pods Resources */,
 				8FBD4EF123B17AA100BFC17B /* ShellScript */,
 				8F39D16023C77A1E001BA026 /* Fabric */,
+				8F0A027023C8D26500EC9BC4 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -588,6 +589,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8F0A027023C8D26500EC9BC4 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		8F39D16023C77A1E001BA026 /* Fabric */ = {
 			isa = PBXShellScriptBuildPhase;
